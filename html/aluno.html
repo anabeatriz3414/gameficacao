@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Aluno | Gameficação</title>
+    <link rel="stylesheet" href="../css/aluno.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="admin-header">
+        <div class="header-container">
+            <div class="brand">
+                <div class="logo-box">G</div>
+                <span class="logo-text">ameficação</span>
+                <span class="panel-badge">Portal do <strong>Aluno</strong></span>
+            </div>
+            <nav>
+                <a href="index.html" class="logout-link">
+                    <i class="fas fa-power-off"></i> <span>Sair</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="centered-wrapper">
+        <div class="welcome-section">
+            <h1>Sua Jornada 👋</h1>
+            <p>Você está fazendo um ótimo trabalho hoje!</p>
+        </div>
+
+        <section class="status-card glow-effect">
+            <div class="level-badge">Nível 01</div>
+            
+            <div class="xp-display">
+                <div class="xp-icon-container">
+                    <i class="fas fa-bolt bounce"></i>
+                </div>
+                <div class="xp-value">
+                    <h2 id="pontos">0</h2>
+                    <span>PONTOS ACUMULADO</span>
+                </div>
+            </div>
+
+            <div class="progress-wrapper">
+                <div class="progress-info">
+                    <span>Próximo Nível</span>
+                    <span id="percent-text">0%</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="barraProgresso">
+                        <div class="bar-shine"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="next-level-msg">Faltam <strong id="xp-faltante">1000</strong> pontos para o Nível 2</p>
+        </section>
+
+        <div class="info-grid">
+            <div class="info-box card-hover">
+                <div class="icon-circle gold"><i class="fas fa-trophy"></i></div>
+                <div class="info-content">
+                    <span class="label">Ranking</span>
+                    <span class="value">#12</span>
+                </div>
+            </div>
+            <div class="info-box card-hover">
+                <div class="icon-circle fire"><i class="fas fa-fire"></i></div>
+                <div class="info-content">
+                    <span class="label">Ofensiva</span>
+                    <span class="value">3 Dias</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/aluno.js"></script>
+</body>
+</html>

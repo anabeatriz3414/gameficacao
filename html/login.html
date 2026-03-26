@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Gameficação</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="gamification-action-bar">
+        <div class="gamification-action-container">
+            <div class="gamification-welcome-info">
+                <div class="gamification-logo-icon">G</div>
+                <div class="gamification-text-group">
+                    <h3>Acesse sua conta</h3>
+                    <p>Continue sua jornada e não perca sua ofensiva de hoje!</p>
+                </div>
+            </div>
+
+            <div class="gamification-benefits-list">
+                <div class="gamification-benefit-item"><i class="fas fa-bolt"></i> +10 XP Diário</div>
+                <div class="gamification-benefit-item"><i class="fas fa-fire"></i> 3 dias seguidos</div>
+            </div>
+        </div>
+    </div>
+
+    <main class="form-section">
+        <div class="form-box">
+            <header class="form-header">
+                <h2>Login</h2>
+                <p>Que bom ver você de volta!</p>
+            </header>
+
+            <form onsubmit="login(event)">
+                <div class="input-group">
+                    <label>E-mail cadastrado</label>
+                    <div class="field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="seu@email.com" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Sua Senha</label>
+                    <div class="field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    ENTRAR NA PLATAFORMA <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </form>
+
+            <footer class="form-footer">
+                <p>Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+                <a href="index.html" class="btn-back">Voltar ao início</a>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+    function login(e){
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+
+        // Lógica de redirecionamento simples
+        if(email.includes("prof")){
+            window.location.href = "professor.html";
+        } else {
+            window.location.href = "aluno.html";
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+/* --- auth.css --- */
+
+/* 1. Configurações Globais */
+:root {
+    --bg-dark: #2c3e50;      /* Azul Marinho da Barra */
+    --primary-blue: #3498db; /* Azul do Logo e Botão */
+    --accent-green: #2ecc71; /* Verde dos Checks */
+    --text-main: #2c3e50;    /* Cor dos títulos */
+    --text-muted: #7f8c8d;   /* Cor de legendas */
+    --white: #ffffff;
+    --border: #eaeeef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 2. Barra Superior Horizontal (Gamification Style) */
+.gamification-action-bar {
+    width: 100%;
+    background-color: var(--bg-dark);
+    color: var(--white);
+    padding: 25px 0;
+    border-bottom: 5px solid var(--primary-blue);
+}
+
+.gamification-action-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.gamification-welcome-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gamification-logo-icon {
+    background-color: var(--primary-blue);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.gamification-text-group h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.gamification-text-group p {
+    font-size: 0.95rem;
+    color: #bdc3c7;
+}
+
+/* Lista de Benefícios/Status na Barra */
+.gamification-benefits-list {
+    display: flex;
+    gap: 25px;
+}
+
+.gamification-benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.gamification-benefit-item i {
+    color: var(--accent-green);
+    font-size: 1.1rem;
+}
+
+/* 3. Área do Formulário (Centralizado) */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.form-box {
+    background: var(--white);
+    width: 100%;
+    max-width: 440px;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form-header h2 {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Inputs e Grupos */
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.field i {
+    position: absolute;
+    left: 18px;
+    color: #bdc3c7;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.field input {
+    width: 100%;
+    padding: 16px 16px 16px 50px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: #fcfcfc;
+    transition: all 0.3s ease;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    background-color: var(--white);
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
+}
+
+.field input:focus + i {
+    color: var(--primary-blue);
+}
+
+/* Botão de Ação */
+.btn-primary {
+    width: 100%;
+    padding: 18px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Rodapé do Card */
+.form-footer {
+    margin-top: 35px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 25px;
+}
+
+.form-footer p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.form-footer a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.btn-back {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #95a5a6;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* 4. Responsividade */
+@media (max-width: 900px) {
+    .gamification-action-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .gamification-benefits-list {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .form-box {
+        padding: 30px 20px;
+        box-shadow: none;
+        background: transparent;
+    }
+    
+    .gamification-benefits-list {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Professor | Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/professor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="admin-header">
+        <div class="header-container">
+            <div class="brand">
+                <div class="logo-box">G</div>
+                <span>Painel <strong>Docente</strong></span>
+            </div>
+            <a href="index.html" class="logout-link"><i class="fas fa-power-off"></i> Sair</a>
+        </div>
+    </header>
+
+    <main class="centered-wrapper">
+        <div class="welcome-section">
+            <h1>Olá, Professor(a)!</h1>
+            <p>Gerencie as recompensas da sua turma em um só lugar.</p>
+        </div>
+
+        <section class="admin-card-main">
+            <div class="card-header-icon">
+                <i class="fas fa-medal"></i>
+            </div>
+            
+            <h2>Distribuir Experiência</h2>
+            
+            <div class="admin-form">
+                <div class="input-field">
+                    <label>Selecione o Aluno</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="nomeAluno" placeholder="Nome do aluno...">
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Quantidade de pontos</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-bolt"></i>
+                        <input type="number" id="pontos" placeholder="Ex: 100">
+                    </div>
+                </div>
+
+                <button class="btn-action" onclick="salvarXP()">
+                    Confirmar Envio <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+
+            <div id="logAtividade" class="mini-log">
+                <p>Nenhuma ação recente.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/professor.js"></script>
+</body>
+</html>
